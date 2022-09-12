@@ -37,7 +37,7 @@ if mode.lower() in ("u", "update"):
 
 for row in data:
     if "char" in row[1] or "text" in row[1]:
-        print(f"new SqlParameter(\"@{row[0]}\", string.IsNullOrWhitespace({objName}{row[0]}) ? (object)DBNull.Value : {objName}{row[0]})),")
+        print(f"new SqlParameter(\"@{row[0]}\", string.IsNullOrWhiteSpace({objName}{row[0]}) ? (object)DBNull.Value : {objName}{row[0]}),")
     else:
         print(f"new SqlParameter(\"@{row[0]}\", {objName}{row[0]}),")
 
